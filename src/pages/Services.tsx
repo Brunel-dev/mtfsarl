@@ -1,60 +1,54 @@
-import { Wrench, GraduationCap, Code, Headphones, Shield, Server, Monitor, Database, Cloud } from 'lucide-react';
+import { Cog, GraduationCap, Wrench, Zap, Settings, Truck, Gauge, Factory } from 'lucide-react';
 import { Layout } from '@/components/Layout';
 
 const services = [
   {
-    icon: Wrench,
-    title: 'Maintenance Informatique',
-    description: 'Service complet de maintenance préventive et corrective pour vos équipements informatiques.',
-    features: ['Diagnostic et réparation', 'Maintenance préventive', 'Mise à jour systèmes', 'Optimisation performances'],
+    icon: Cog,
+    title: 'Systèmes d\'Injection',
+    description: 'Test et réparation des pompes et systèmes d\'injection mécaniques et électroniques.',
+    features: ['Pompes à injection', 'Injecteurs mécaniques', 'Injecteurs Common Rail', 'Bancs de test modernes'],
+  },
+  {
+    icon: Truck,
+    title: 'Engins Lourds',
+    description: 'Maintenance préventive et corrective complète des engins lourds de chantier.',
+    features: ['Pelles mécaniques', 'Bulldozers', 'Chargeuses', 'Camions de chantier'],
+  },
+  {
+    icon: Zap,
+    title: 'Groupes Électrogènes',
+    description: 'Maintenance et réparation de groupes électrogènes de toutes puissances et marques.',
+    features: ['Maintenance préventive', 'Réparation moteurs', 'Systèmes de contrôle', 'Mise en service'],
   },
   {
     icon: GraduationCap,
-    title: 'Formation Professionnelle',
-    description: 'Programmes de formation sur mesure pour développer les compétences techniques de vos équipes.',
-    features: ['Formation bureautique', 'Développement web', 'Administration système', 'Certification IT'],
+    title: 'Formation Technique',
+    description: 'Programmes de formation professionnelle en maintenance et conduite d\'engins.',
+    features: ['Maintenance industrielle', 'Conduite d\'engins', 'Systèmes d\'injection', 'Certification professionnelle'],
   },
   {
-    icon: Code,
-    title: 'Développement Web & Logiciel',
-    description: 'Création de sites web, applications et logiciels personnalisés selon vos besoins.',
-    features: ['Sites vitrine', 'Applications métier', 'E-commerce', 'API & intégrations'],
+    icon: Settings,
+    title: 'Diagnostic Technique',
+    description: 'Diagnostic complet en électricité, électronique, hydraulique et transmission.',
+    features: ['Diagnostic électrique', 'Diagnostic électronique', 'Diagnostic hydraulique', 'Diagnostic transmission'],
   },
   {
-    icon: Headphones,
-    title: 'Support Technique',
-    description: 'Assistance technique réactive et professionnelle pour résoudre tous vos problèmes IT.',
-    features: ['Support téléphonique', 'Intervention sur site', 'Télémaintenance', 'SLA garantis'],
+    icon: Factory,
+    title: 'Services Industriels',
+    description: 'Prestations de services industriels complètes pour entreprises et industries.',
+    features: ['Maintenance sur site', 'Contrats de maintenance', 'Conseil technique', 'Optimisation process'],
   },
   {
-    icon: Shield,
-    title: 'Cybersécurité',
-    description: 'Protection complète de vos systèmes et données contre les menaces informatiques.',
-    features: ['Audit sécurité', 'Antivirus & firewall', 'Sauvegarde données', 'Plan de reprise'],
+    icon: Gauge,
+    title: 'Bancs de Test',
+    description: 'Équipements de test de haute précision pour pompes et injecteurs.',
+    features: ['Tests de débit', 'Tests de pression', 'Calibration', 'Rapports d\'analyse'],
   },
   {
-    icon: Server,
-    title: 'Infrastructure Réseau',
-    description: 'Conception, installation et maintenance d\'infrastructures réseau performantes.',
-    features: ['Architecture réseau', 'Installation câblage', 'Configuration serveurs', 'Supervision 24/7'],
-  },
-  {
-    icon: Monitor,
-    title: 'Équipements IT',
-    description: 'Fourniture et installation de matériel informatique de qualité.',
-    features: ['Postes de travail', 'Serveurs', 'Périphériques', 'Accessoires'],
-  },
-  {
-    icon: Database,
-    title: 'Gestion de Données',
-    description: 'Solutions de stockage, sauvegarde et gestion de vos données d\'entreprise.',
-    features: ['Stockage cloud', 'Backup automatisé', 'Récupération données', 'Archivage'],
-  },
-  {
-    icon: Cloud,
-    title: 'Solutions Cloud',
-    description: 'Migration et gestion de vos applications dans le cloud pour plus de flexibilité.',
-    features: ['Migration cloud', 'Office 365', 'Hébergement', 'Solutions SaaS'],
+    icon: Wrench,
+    title: 'Réparation Moteurs',
+    description: 'Révision et réparation complète de moteurs diesel et industriels.',
+    features: ['Révision complète', 'Remplacement pièces', 'Réglages moteur', 'Tests de performance'],
   },
 ];
 
@@ -65,8 +59,9 @@ const Services = () => {
       <section className="pt-32 pb-16 gradient-primary">
         <div className="container-custom text-center text-card">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Nos Services</h1>
-          <p className="text-xl text-card/80 max-w-2xl mx-auto">
-            Une gamme complète de services informatiques pour accompagner votre transformation digitale.
+          <p className="text-xl text-card/80 max-w-3xl mx-auto">
+            Une gamme complète de services techniques pour la maintenance industrielle, 
+            les systèmes d'injection et la formation professionnelle.
           </p>
         </div>
       </section>
@@ -75,20 +70,20 @@ const Services = () => {
       <section className="section-padding bg-background">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <div
                 key={service.title}
                 className="card-elevated p-8"
               >
-                <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-primary-foreground" />
+                <div className="w-16 h-16 rounded-2xl gradient-accent flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-accent-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                 <p className="text-muted-foreground mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
                       {feature}
                     </li>
                   ))}

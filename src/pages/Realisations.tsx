@@ -5,18 +5,18 @@ import project1 from '@/assets/project-1.jpg';
 import project2 from '@/assets/project-2.jpg';
 import project3 from '@/assets/project-3.jpg';
 
-const categories = ['Tous', 'Infrastructure', 'Formation', 'Développement', 'Maintenance'];
+const categories = ['Tous', 'Injection', 'Engins', 'Électrogènes', 'Formation'];
 
 const projects = [
-  { image: project1, title: 'Installation Data Center', category: 'Infrastructure', description: 'Mise en place d\'un data center complet pour une entreprise de télécommunications.' },
-  { image: project2, title: 'Formation Bureautique', category: 'Formation', description: 'Programme de formation Office 365 pour 50 employés d\'une banque.' },
-  { image: project3, title: 'Infrastructure Réseau', category: 'Infrastructure', description: 'Déploiement d\'une infrastructure réseau pour un immeuble de bureaux.' },
-  { image: project1, title: 'Maintenance Préventive', category: 'Maintenance', description: 'Contrat de maintenance pour un parc de 200 ordinateurs.' },
-  { image: project2, title: 'Formation Développement', category: 'Formation', description: 'Formation intensive en développement web pour une équipe IT.' },
-  { image: project3, title: 'Site E-commerce', category: 'Développement', description: 'Création d\'une plateforme e-commerce pour une chaîne de distribution.' },
-  { image: project1, title: 'Serveur d\'Entreprise', category: 'Infrastructure', description: 'Installation et configuration d\'un serveur haute disponibilité.' },
-  { image: project2, title: 'Formation Cybersécurité', category: 'Formation', description: 'Sensibilisation à la sécurité informatique pour 100 employés.' },
-  { image: project3, title: 'Application Métier', category: 'Développement', description: 'Développement d\'une application de gestion sur mesure.' },
+  { image: project1, title: 'Réparation Injecteurs Common Rail', category: 'Injection', description: 'Diagnostic et réparation complète d\'injecteurs Common Rail pour flotte de camions.' },
+  { image: project2, title: 'Révision Pompe d\'Injection', category: 'Injection', description: 'Révision complète d\'une pompe à injection mécanique Bosch.' },
+  { image: project3, title: 'Maintenance Pelle CAT', category: 'Engins', description: 'Maintenance préventive et corrective d\'une pelle hydraulique Caterpillar.' },
+  { image: project1, title: 'Banc de Test Injecteurs', category: 'Injection', description: 'Installation et calibration d\'un banc de test haute précision.' },
+  { image: project2, title: 'Formation Techniciens', category: 'Formation', description: 'Formation de 20 techniciens aux systèmes d\'injection électronique.' },
+  { image: project3, title: 'Groupe Électrogène 500kVA', category: 'Électrogènes', description: 'Révision complète d\'un groupe électrogène industriel.' },
+  { image: project1, title: 'Diagnostic Bulldozer', category: 'Engins', description: 'Diagnostic complet et réparation du système hydraulique.' },
+  { image: project2, title: 'Formation Conducteurs', category: 'Formation', description: 'Formation à la conduite d\'engins lourds avec certification.' },
+  { image: project3, title: 'Maintenance Préventive', category: 'Électrogènes', description: 'Contrat de maintenance préventive pour parc de 10 groupes.' },
 ];
 
 const Realisations = () => {
@@ -33,7 +33,7 @@ const Realisations = () => {
         <div className="container-custom text-center text-card">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Nos Réalisations</h1>
           <p className="text-xl text-card/80 max-w-2xl mx-auto">
-            Découvrez nos projets récents et l'impact de notre expertise sur les entreprises camerounaises.
+            Découvrez nos interventions récentes sur injecteurs, pompes, moteurs et équipements industriels.
           </p>
         </div>
       </section>
@@ -50,8 +50,8 @@ const Realisations = () => {
                 className={cn(
                   "px-6 py-2 rounded-full font-medium transition-all duration-300",
                   activeCategory === category
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-secondary-foreground hover:bg-primary/10"
+                    ? "bg-secondary text-secondary-foreground"
+                    : "bg-muted text-muted-foreground hover:bg-secondary/10"
                 )}
               >
                 {category}
@@ -75,7 +75,7 @@ const Realisations = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="p-6">
-                  <span className="text-primary text-sm font-medium">{project.category}</span>
+                  <span className="text-secondary text-sm font-medium">{project.category}</span>
                   <h3 className="text-xl font-semibold mt-1 mb-2">{project.title}</h3>
                   <p className="text-muted-foreground text-sm">{project.description}</p>
                 </div>

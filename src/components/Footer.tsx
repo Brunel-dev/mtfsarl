@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Linkedin, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Linkedin, Twitter, Mail, Phone, MapPin, Wrench } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -9,23 +9,25 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">D</span>
+              <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
+                <Wrench className="w-5 h-5 text-secondary-foreground" />
               </div>
-              <span className="font-bold text-xl">DoualaTech</span>
+              <div className="flex flex-col">
+                <span className="font-bold text-lg leading-tight">STE MTF</span>
+                <span className="text-xs opacity-80">SARL</span>
+              </div>
             </div>
             <p className="text-background/70 mb-6">
-              Votre partenaire technologique de confiance à Douala. 
-              Solutions informatiques innovantes et services professionnels.
+              Maintenance industrielle, réparation de systèmes d'injection et formation technique au Cameroun.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-secondary transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-secondary transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-secondary transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
@@ -39,7 +41,7 @@ export function Footer() {
                 <li key={item}>
                   <Link
                     to={item === 'Accueil' ? '/' : `/${item.toLowerCase().replace(' ', '-').replace('à', 'a')}`}
-                    className="text-background/70 hover:text-primary transition-colors"
+                    className="text-background/70 hover:text-secondary transition-colors"
                   >
                     {item}
                   </Link>
@@ -52,9 +54,9 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-6">Nos Services</h4>
             <ul className="space-y-3">
-              {['Maintenance Informatique', 'Formation Professionnelle', 'Développement Web', 'Conseil IT', 'Support Technique'].map((item) => (
+              {['Systèmes d\'Injection', 'Engins Lourds', 'Groupes Électrogènes', 'Formation Technique', 'Diagnostic Industriel'].map((item) => (
                 <li key={item}>
-                  <Link to="/services" className="text-background/70 hover:text-primary transition-colors">
+                  <Link to="/services" className="text-background/70 hover:text-secondary transition-colors">
                     {item}
                   </Link>
                 </li>
@@ -67,22 +69,22 @@ export function Footer() {
             <h4 className="font-semibold text-lg mb-6">Contact</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
                 <span className="text-background/70">
-                  Rue de la Joie, Akwa<br />
-                  Douala, Cameroun
+                  50m du carrefour Conquête<br />
+                  BP: 13079 Douala-Cameroun
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+237699000000" className="text-background/70 hover:text-primary transition-colors">
-                  +237 699 000 000
+                <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
+                <a href="tel:+237654873282" className="text-background/70 hover:text-secondary transition-colors">
+                  +237 654 87 32 82
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="mailto:contact@doualatech.com" className="text-background/70 hover:text-primary transition-colors">
-                  contact@doualatech.com
+                <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
+                <a href="mailto:mtfsarl1@gmail.com" className="text-background/70 hover:text-secondary transition-colors">
+                  mtfsarl1@gmail.com
                 </a>
               </li>
             </ul>
@@ -90,7 +92,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-background/10 mt-12 pt-8 text-center text-background/50">
-          <p>&copy; {new Date().getFullYear()} DoualaTech. Tous droits réservés.</p>
+          <p>&copy; {new Date().getFullYear()} STE MTF SARL. Tous droits réservés.</p>
         </div>
       </div>
     </footer>
