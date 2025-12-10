@@ -9,7 +9,6 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -30,7 +29,7 @@ const Contact = () => {
       description: "Nous vous répondrons dans les plus brefs délais.",
     });
     
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setFormData({ name: '', email: '', message: '' });
     setIsSubmitting(false);
   };
 
@@ -41,7 +40,7 @@ const Contact = () => {
         <div className="container-custom text-center text-card">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contactez-Nous</h1>
           <p className="text-xl text-card/80 max-w-2xl mx-auto">
-            Nous sommes là pour répondre à vos questions et vous accompagner dans vos projets.
+            Nous sommes là pour répondre à vos questions et vous accompagner dans vos projets techniques.
           </p>
         </div>
       </section>
@@ -55,36 +54,40 @@ const Contact = () => {
               <h2 className="text-2xl font-bold mb-6">Nos Coordonnées</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-primary-foreground" />
+                  <div className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Adresse</h3>
                     <p className="text-muted-foreground">
-                      Rue de la Joie, Akwa<br />
-                      Douala, Cameroun
+                      50m du carrefour Conquête en allant<br />
+                      de l'Hôpital Général vers Makepe<br />
+                      BP: 13079 Douala-Cameroun
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-primary-foreground" />
+                  <div className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Téléphone</h3>
-                    <a href="tel:+237699000000" className="text-muted-foreground hover:text-primary transition-colors">
-                      +237 699 000 000
+                    <h3 className="font-semibold mb-1">Téléphones</h3>
+                    <a href="tel:+237654873282" className="text-muted-foreground hover:text-secondary transition-colors block">
+                      (+237) 654 87 32 82
+                    </a>
+                    <a href="tel:+237690993444" className="text-muted-foreground hover:text-secondary transition-colors block">
+                      (+237) 690 99 34 44
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-primary-foreground" />
+                  <div className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <a href="mailto:contact@doualatech.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      contact@doualatech.com
+                    <a href="mailto:mtfsarl1@gmail.com" className="text-muted-foreground hover:text-secondary transition-colors">
+                      mtfsarl1@gmail.com
                     </a>
                   </div>
                 </div>
@@ -100,7 +103,7 @@ const Contact = () => {
                   </div>
                   <div className="flex justify-between">
                     <span>Samedi</span>
-                    <span>09h00 - 14h00</span>
+                    <span>08h00 - 14h00</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Dimanche</span>
@@ -127,7 +130,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
                         placeholder="Votre nom"
                       />
                     </div>
@@ -142,24 +145,10 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-secondary focus:border-transparent transition-all"
                         placeholder="votre@email.com"
                       />
                     </div>
-                  </div>
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                      Sujet
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      placeholder="Sujet de votre message"
-                    />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
@@ -172,8 +161,8 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-                      placeholder="Décrivez votre projet ou posez vos questions..."
+                      className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-secondary focus:border-transparent transition-all resize-none"
+                      placeholder="Décrivez votre besoin ou posez vos questions..."
                     />
                   </div>
                   <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
@@ -190,14 +179,14 @@ const Contact = () => {
       {/* Map */}
       <section className="h-96 bg-muted">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63756.93134662053!2d9.6696696!3d4.0510564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061128be2e1fe6d%3A0x92daa1444781c48b!2sDouala%2C%20Cameroun!5e0!3m2!1sfr!2sfr!4v1702000000000!5m2!1sfr!2sfr"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7!2d9.7!3d4.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMDMnMDAuMCJOIDnCsDQyJzAwLjAiRQ!5e0!3m2!1sfr!2scm!4v1702000000000!5m2!1sfr!2scm"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Localisation DoualaTech"
+          title="Localisation STE MTF SARL"
         />
       </section>
     </Layout>

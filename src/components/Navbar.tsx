@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Wrench } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -37,15 +37,16 @@ export function Navbar() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">D</span>
+            <div className="w-10 h-10 rounded-lg gradient-accent flex items-center justify-center">
+              <Wrench className="w-5 h-5 text-accent-foreground" />
             </div>
-            <span className={cn(
-              "font-bold text-xl transition-colors",
+            <div className={cn(
+              "flex flex-col transition-colors",
               isScrolled ? "text-foreground" : "text-card"
             )}>
-              DoualaTech
-            </span>
+              <span className="font-bold text-lg leading-tight">STE MTF</span>
+              <span className="text-xs opacity-80">SARL</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -57,9 +58,9 @@ export function Navbar() {
                 className={cn(
                   "font-medium transition-colors relative py-2",
                   location.pathname === link.href
-                    ? isScrolled ? "text-primary" : "text-card"
-                    : isScrolled ? "text-muted-foreground hover:text-primary" : "text-card/80 hover:text-card",
-                  location.pathname === link.href && "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-current"
+                    ? isScrolled ? "text-secondary" : "text-card"
+                    : isScrolled ? "text-muted-foreground hover:text-secondary" : "text-card/80 hover:text-card",
+                  location.pathname === link.href && "after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-secondary"
                 )}
               >
                 {link.label}
@@ -96,8 +97,8 @@ export function Navbar() {
                   className={cn(
                     "font-medium py-2 transition-colors",
                     location.pathname === link.href
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-primary"
+                      ? "text-secondary"
+                      : "text-muted-foreground hover:text-secondary"
                   )}
                 >
                   {link.label}
