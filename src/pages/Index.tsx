@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Wrench, GraduationCap, Cog, Zap, Settings, Truck } from 'lucide-react';
+import { ArrowRight, Wrench, GraduationCap, Cog, Settings, Truck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/Layout';
 import heroBg from '@/assets/hero-bg.jpg';
@@ -10,8 +10,8 @@ import project3 from '@/assets/project-3.jpg';
 const services = [
   {
     icon: Cog,
-    title: 'Systèmes d\'Injection',
-    description: 'Test et réparation des pompes et systèmes d\'injection mécaniques et électroniques.',
+    title: 'Systèmes d\'Injection Diesel',
+    description: 'Test et réparation des pompes et systèmes d\'injection diesel mécaniques et électroniques.',
   },
   {
     icon: Truck,
@@ -19,14 +19,9 @@ const services = [
     description: 'Maintenance préventive et corrective des engins lourds et équipements industriels.',
   },
   {
-    icon: Zap,
-    title: 'Groupes Électrogènes',
-    description: 'Entretien et réparation de groupes électrogènes de toutes puissances.',
-  },
-  {
     icon: GraduationCap,
     title: 'Formation Technique',
-    description: 'Programmes de formation en maintenance industrielle et conduite d\'engins.',
+    description: 'Programmes de formation en maintenance industrielle.',
   },
   {
     icon: Settings,
@@ -67,10 +62,10 @@ const Index = () => {
           </h1>
           <p className="text-xl md:text-2xl text-card/80 max-w-4xl mx-auto mb-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
             Société Maintenance Technique et Formation spécialisée dans la maintenance industrielle, 
-            la réparation de systèmes d'injection et la formation technique.
+            la réparation de systèmes d'injection diesel et la formation technique.
           </p>
           <p className="text-lg text-secondary font-medium mb-10 animate-slide-up" style={{ animationDelay: '0.15s' }}>
-            Testez et réparez toutes vos pompes et systèmes d'injection mécaniques et électroniques.
+            Testez et réparez toutes vos pompes à injection et injecteurs diesel mécaniques et électroniques.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <Button asChild variant="hero" size="lg">
