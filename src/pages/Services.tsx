@@ -1,12 +1,12 @@
-import { Cog, GraduationCap, Wrench, Zap, Settings, Truck, Gauge, Factory } from 'lucide-react';
+import { Cog, GraduationCap, Wrench, Settings, Truck, Gauge, Factory } from 'lucide-react';
 import { Layout } from '@/components/Layout';
 
 const services = [
   {
     icon: Cog,
-    title: 'Systèmes d\'Injection',
-    description: 'Test et réparation des pompes et systèmes d\'injection mécaniques et électroniques.',
-    features: ['Pompes à injection', 'Injecteurs mécaniques', 'Injecteurs Common Rail', 'Bancs de test modernes'],
+    title: 'Systèmes d\'Injection Diesel',
+    description: 'Test et réparation des pompes à injection et injecteurs diesel mécaniques et électroniques.',
+    features: ['Pompes à injection diesel', 'Injecteurs mécaniques', 'Injecteurs Common Rail', 'Bancs de test modernes'],
   },
   {
     icon: Truck,
@@ -15,16 +15,10 @@ const services = [
     features: ['Pelles mécaniques', 'Bulldozers', 'Chargeuses', 'Camions de chantier'],
   },
   {
-    icon: Zap,
-    title: 'Groupes Électrogènes',
-    description: 'Maintenance et réparation de groupes électrogènes de toutes puissances et marques.',
-    features: ['Maintenance préventive', 'Réparation moteurs', 'Systèmes de contrôle', 'Mise en service'],
-  },
-  {
     icon: GraduationCap,
     title: 'Formation Technique',
-    description: 'Programmes de formation professionnelle en maintenance et conduite d\'engins.',
-    features: ['Maintenance industrielle', 'Conduite d\'engins', 'Systèmes d\'injection', 'Certification professionnelle'],
+    description: 'Programmes de formation professionnelle en maintenance industrielle.',
+    features: ['Maintenance industrielle', 'Systèmes d\'injection diesel', 'Certification professionnelle', 'Diagnostic technique'],
   },
   {
     icon: Settings,
@@ -41,7 +35,7 @@ const services = [
   {
     icon: Gauge,
     title: 'Bancs de Test',
-    description: 'Équipements de test de haute précision pour pompes et injecteurs.',
+    description: 'Équipements de test de haute précision pour pompes et injecteurs diesel.',
     features: ['Tests de débit', 'Tests de pression', 'Calibration', 'Rapports d\'analyse'],
   },
   {

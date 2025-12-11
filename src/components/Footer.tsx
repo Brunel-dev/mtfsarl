@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Linkedin, Twitter, Mail, Phone, MapPin, Wrench } from 'lucide-react';
+import { Facebook, Mail, Phone, MapPin, Wrench, MessageCircle } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -18,17 +18,14 @@ export function Footer() {
               </div>
             </div>
             <p className="text-background/70 mb-6">
-              Maintenance industrielle, réparation de systèmes d'injection et formation technique au Cameroun.
+              Maintenance industrielle, réparation de systèmes d'injection diesel et formation technique au Cameroun.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-secondary transition-colors">
+              <a href="https://www.facebook.com/share/1D8DiwbMjQ/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-secondary transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-secondary transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-secondary transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://wa.me/237696168929" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-[#25D366] transition-colors">
+                <MessageCircle className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -54,7 +51,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-6">Nos Services</h4>
             <ul className="space-y-3">
-              {['Systèmes d\'Injection', 'Engins Lourds', 'Groupes Électrogènes', 'Formation Technique', 'Diagnostic Industriel'].map((item) => (
+              {['Systèmes d\'Injection Diesel', 'Engins Lourds', 'Formation Technique', 'Diagnostic Industriel'].map((item) => (
                 <li key={item}>
                   <Link to="/services" className="text-background/70 hover:text-secondary transition-colors">
                     {item}
