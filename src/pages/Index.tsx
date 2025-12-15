@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Wrench, GraduationCap, Cog, Settings, Truck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Layout } from '@/components/Layout';
-import heroBg from '@/assets/hero-bg.jpg';
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
+import heroBg from '@/assets/pompe_3.jpg';
+import project1 from '@/assets/injecteur_1.jpg';
+import project2 from '@/assets/cat.jpg';
+import project3 from '@/assets/equipe_1.jpg';
 
 const services = [
   {
@@ -38,7 +38,7 @@ const services = [
 const projects = [
   { image: project1, title: 'Réparation Injecteurs', category: 'Injection' },
   { image: project2, title: 'Maintenance Moteurs', category: 'Engins Lourds' },
-  { image: project3, title: 'Banc de Test', category: 'Équipements' },
+  { image: project3, title: 'Enseignement de qualité', category: 'Formation' },
 ];
 
 const Index = () => {

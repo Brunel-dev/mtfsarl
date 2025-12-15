@@ -1,6 +1,6 @@
 import { Target, Eye, Shield, Zap, Clock, CheckCircle } from 'lucide-react';
 import { Layout } from '@/components/Layout';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBg from '@/assets/pompe_5.jpg';
 
 const values = [
   {

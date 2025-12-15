@@ -1,22 +1,27 @@
 import { useState } from 'react';
 import { Layout } from '@/components/Layout';
 import { cn } from '@/lib/utils';
-import project1 from '@/assets/project-1.jpg';
-import project2 from '@/assets/project-2.jpg';
-import project3 from '@/assets/project-3.jpg';
+import project1 from '@/assets/injecteur_1.jpg';
+import project2 from '@/assets/pompe_1.jpg';
+import project3 from '@/assets/equipe_1.jpg';
+import project4 from '@/assets/injecteur_2.jpg';
+import project5 from '@/assets/equipe_2.jpg';
+import project6 from '@/assets/pompe_3.jpg';
+import project7 from '@/assets/cat.jpg';
 
-const categories = ['Tous', 'Injection', 'Engins', 'Électrogènes', 'Formation'];
+
+const categories = ['Tous', 'Injecteur', 'Engins', 'Pompe à injection', 'Formation'];
 
 const projects = [
-  { image: project1, title: 'Réparation Injecteurs Common Rail', category: 'Injection', description: 'Diagnostic et réparation complète d\'injecteurs Common Rail pour flotte de camions.' },
-  { image: project2, title: 'Révision Pompe d\'Injection', category: 'Injection', description: 'Révision complète d\'une pompe à injection mécanique Bosch.' },
-  { image: project3, title: 'Maintenance Pelle CAT', category: 'Engins', description: 'Maintenance préventive et corrective d\'une pelle hydraulique Caterpillar.' },
-  { image: project1, title: 'Banc de Test Injecteurs', category: 'Injection', description: 'Installation et calibration d\'un banc de test haute précision.' },
-  { image: project2, title: 'Formation Techniciens', category: 'Formation', description: 'Formation de 20 techniciens aux systèmes d\'injection électronique.' },
-  { image: project3, title: 'Groupe Électrogène 500kVA', category: 'Électrogènes', description: 'Révision complète d\'un groupe électrogène industriel.' },
+  { image: project1, title: 'Réparation Injecteurs Common Rail', category: 'Injecteur', description: 'Diagnostic et réparation complète d\'injecteurs Common Rail pour flotte de camions.' },
+  { image: project2, title: 'Révision Pompe d\'Injection Bosch', category: 'Pompe à injection', description: 'Révision complète d\'une pompe à injection mécanique Bosch.' },
+  { image: project7, title: 'Maintenance Pelle CAT', category: 'Engins', description: 'Maintenance préventive et corrective d\'une pelle hydraulique Caterpillar.' },
+  { image: project4, title: 'Test Injecteurs Diesel', category: 'Injecteur', description: 'Test et calibration d\'injecteurs diesel sur banc haute précision.' },
+  { image: project3, title: 'Formation Techniciens', category: 'Formation', description: 'Formation de 20 techniciens aux systèmes d\'injection électronique.' },
+  // { image: project3, title: 'Pompe VP44 Révisée', category: 'Pompe à injection', description: 'Réparation complète d\'une pompe VP44 pour véhicule utilitaire.' },
   { image: project1, title: 'Diagnostic Bulldozer', category: 'Engins', description: 'Diagnostic complet et réparation du système hydraulique.' },
-  { image: project2, title: 'Formation Conducteurs', category: 'Formation', description: 'Formation à la conduite d\'engins lourds avec certification.' },
-  { image: project3, title: 'Maintenance Préventive', category: 'Électrogènes', description: 'Contrat de maintenance préventive pour parc de 10 groupes.' },
+  { image: project5, title: 'Formation Injection Diesel', category: 'Formation', description: 'Formation aux systèmes d\'injection diesel Common Rail.' },
+  { image: project6, title: 'Pompe Rotative Denso', category: 'Pompe à injection', description: 'Révision d\'une pompe rotative Denso pour moteur industriel.' },
 ];
 
 const Realisations = () => {

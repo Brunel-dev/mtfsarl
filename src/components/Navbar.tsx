@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Wrench } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import logoMtf from '@/assets/logo-mtf.png';
 
 const navLinks = [
   { href: '/', label: 'Accueil' },
@@ -37,16 +38,7 @@ export function Navbar() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg gradient-accent flex items-center justify-center">
-              <Wrench className="w-5 h-5 text-accent-foreground" />
-            </div>
-            <div className={cn(
-              "flex flex-col transition-colors",
-              isScrolled ? "text-foreground" : "text-card"
-            )}>
-              <span className="font-bold text-lg leading-tight">STE MTF</span>
-              <span className="text-xs opacity-80">SARL</span>
-            </div>
+            <img src={logoMtf} alt="MTF Sarl Logo" className="h-14 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

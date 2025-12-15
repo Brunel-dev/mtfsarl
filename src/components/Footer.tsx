@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Mail, Phone, MapPin, Wrench, MessageCircle } from 'lucide-react';
+import { Facebook, Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
+import logoMtf from '@/assets/logo.jpg';
 
 export function Footer() {
   return (
@@ -9,13 +10,7 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center">
-                <Wrench className="w-5 h-5 text-secondary-foreground" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-lg leading-tight">STE MTF</span>
-                <span className="text-xs opacity-80">SARL</span>
-              </div>
+              <img src={logoMtf} alt="MTF Sarl Logo" className="h-16 w-auto" />
             </div>
             <p className="text-background/70 mb-6">
               Maintenance industrielle, réparation de systèmes d'injection diesel et formation technique au Cameroun.
